@@ -1,0 +1,81 @@
+.td-widget {
+    padding: 30px 0 30px 0;
+    margin-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 0 1px 0 0 rgba(238, 238, 238, 1);
+    border-radius: 3px;
+
+    &:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+    
+    @include m992 {
+        &:first-child {
+            margin-top: 30px;
+        }
+    }
+
+    .td-widget-inner {
+        padding: 0 30px;
+
+        .td-widget-title h4 {
+            position: relative;
+            font-size: 16px;
+            color: $black;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+            &:before {
+                width: 60px;
+                height: 2px;
+                background-color: #ccc;
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+            }
+
+            &:after {
+                content: "";
+                width: 0;
+                height: 0;
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                border-left: 0;
+                border-right: 5px solid transparent;
+                border-top: 5px solid #ccc;
+            }
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    color: #000;
+                    text-decoration: none;
+                    @include shift(all, .2s, linear);
+
+                    &:hover {
+                        color: #95a5a6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@import "widget/search.scss";
+@import "widget/categories.scss";
+@import "widget/nav-menu.scss";
+@import "widget/recent-entries.scss";
+@import "widget/meta.scss";
+@import "widget/tags.scss";
+@import "widget/calendar.scss";

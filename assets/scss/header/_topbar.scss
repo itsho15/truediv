@@ -1,0 +1,10 @@
+.td-topbar {
+    background-color: $black;
+    color: #fff;
+    line-height: 45px;
+    
+    @include m992 {
+        display: none;
+    }
+}
+

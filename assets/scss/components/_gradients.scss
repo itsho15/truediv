@@ -1,0 +1,46 @@
+// Gradients
+
+// graV(transparent, #ff2);
+@mixin graV($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+    background: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);
+    background: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);
+    background: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0);
+}
+
+// graR(transparent, #ff2);
+@mixin graR($inner-color: #555, $outer-color: #333) {
+    background: -webkit-radial-gradient(circle, $inner-color, $outer-color);
+    background: radial-gradient(circle, $inner-color, $outer-color);
+}
+
+// graH(transparent, #ff2);
+@mixin graH($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+    background: -webkit-linear-gradient(left, $start-color $start-percent, $end-color $end-percent);
+    background: -o-linear-gradient(left, $start-color $start-percent, $end-color $end-percent);
+    background: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1);
+}
+
+
+//@include border-gradient(top left, #3adc95, #8bd349, 10px);
+@mixin border-gradient($dir, $from, $to, $width) {
+  border-left: $width solid $from;
+  border-right: $width solid $to;
+  background-image:
+    // Needed for both the top and bottom borders
+    -webkit-linear-gradient($dir, $from, $to),
+    -webkit-linear-gradient($dir, $from, $to);
+  background-size: 100% $width;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}
+
+
+//@include border-gradient(top left, #3adc95, #8bd349);
+@mixin text-gradient($dir, $from, $to) {
+  background: -webkit-linear-gradient($dir, $from, $to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

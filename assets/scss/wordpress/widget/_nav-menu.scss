@@ -1,0 +1,16 @@
+.widget_nav_menu {
+    padding-bottom: 20px;
+    
+	ul li {
+        padding: 7px 0;
+        border-bottom: 1px dashed #eee;
+        
+        &:last-child {
+            border-bottom: 0px;
+        }
+        
+        .sub-menu {
+            display: none;
+        }
+	}
+}

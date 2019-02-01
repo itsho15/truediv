@@ -1,0 +1,19 @@
+// Curved Border
+
+// @include curved(%);
+@mixin curved($s) {
+    border-bottom-right-radius: 50% $s;
+    border-top-right-radius: 50% $s;
+    border-bottom-left-radius: 50% $s;
+    border-top-left-radius: 50% $s;
+    
+    @include small {
+        border-bottom-right-radius: 50% 10%;
+        border-bottom-left-radius: 50% 10%;
+    }
+    
+    @include medium {
+        border-bottom-right-radius: 50% 10%;
+        border-bottom-left-radius: 50% 10%;
+    }
+}

@@ -1,0 +1,60 @@
+/* Search Widget */
+.widget_search {
+    background-color: #95a5a6;
+    padding: 15px 0;
+    @include shift(all, .2s, ease-in-out);
+    
+    &:hover {
+        background-color: #34495e;
+    }
+    
+    .td-widget-inner {
+        padding: 0 15px;
+    }
+}
+
+.td-search-form {
+    position: relative;
+
+    input[type="search"] {
+        width: 100%;
+        padding: 15px;
+        outline: inherit;
+        font-size: 14px;
+        text-transform: capitalize;
+        font-weight: 400;
+        border: 2px solid #fff;
+        border-radius: 3px;
+        color: #333;
+        @include shift(all, .2s, ease-in-out);
+
+        &:focus {
+            border: 2px solid #fff;
+        }
+
+        @include placeholder {
+            color: #ccc;
+            font-size: 14px;
+            text-transform: capitalize;
+            font-weight: 400;
+        }
+    }
+
+    .search-form-submit {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        height: 100%;
+        background-color: transparent;
+        color: #333;
+        outline: inherit;
+        border: 0;
+        cursor: pointer;
+        font-size: 16px;
+        @include shift(all, .2s, ease-in-out);
+        
+        &:hover {
+            color: #ccc;
+        }
+    }
+}

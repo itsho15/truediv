@@ -1,0 +1,18 @@
+// Links
+
+//@include a(white, blue, green, red);
+@mixin a($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover; 
+      text-decoration: none;
+    }
+    &:active {
+      color: $active;
+    }
+  }
+}

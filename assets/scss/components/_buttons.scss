@@ -1,0 +1,35 @@
+@mixin btn() {
+    overflow: visible; // Shrinkwrap the text in IE7-
+    margin: 0;
+    border: 0;
+    color: #000;
+    background: transparent;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 25px;
+    line-height: 1.5;
+    user-select: none;
+    text-decoration: underline;
+    cursor: pointer;
+    -moz-user-select: text; // Make button text selectable in Gecko
+
+    /* Remove mystery padding in Gecko browsers.
+     * See https://bugzilla.mozilla.org/show_bug.cgi?id=140562
+     */
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+}
+
+// Buttons
+btn {
+    @include btn();
+    
+    &:hover {
+        color: #fff;
+        opacity: 0.8;
+    }
+}

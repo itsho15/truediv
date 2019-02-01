@@ -1,0 +1,32 @@
+.widget_recent_entries {
+    padding-bottom: 20px;
+    
+	ul li {
+        padding: 7px 0;
+        border-bottom: 1px dashed #eee;
+        
+        &:last-child {
+            border-bottom: 0px;
+        }
+	}
+}
+
+.recent-posts-widget-with-thumbnails {
+    .rpwwt-post-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 15px 0 10px;
+        display: block;
+    }
+    
+    .rpwwt-post-categories {
+        color: #777;
+    }
+    
+    .rpwwt-post-date {
+        font-size: 12px;
+        color: #777;
+        font-style: italic;
+    }
+}

@@ -1,0 +1,16 @@
+.csf-nav a {
+    font-weight: 600;
+}
+
+.csf-nav i {
+    font-size: 18px !important;
+    margin-right: 10px !important;
+}
+
+.csf-nav ul li .csf-section-active {
+    background-color: #3498db !important;
+}
+
+.csf-header-left {
+    display: none !important;
+}

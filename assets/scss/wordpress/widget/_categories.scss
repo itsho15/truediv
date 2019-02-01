@@ -1,0 +1,44 @@
+.widget_archive,
+.widget_categories {
+    
+    .td-widget-title h4 {
+        margin-bottom: 23px !important;
+    }
+    
+	ul li {
+		align-items: baseline;
+		display: flex;
+		flex-wrap: wrap;
+        padding: 7px 0;
+
+		a {
+			border: none;
+			order: 1;
+
+			&:hover {
+				background-color: transparent;
+			}
+		}
+
+		&::before {
+			border-bottom: 1px dashed #eee;
+			content: "";
+			flex-grow: 1;
+			order: 2;
+			margin: 0.25em 15px;
+		}
+
+		.td-post-count {
+			order: 3;
+            color: #777;
+            text-align: center;
+		}
+
+		ul {
+			order: 4;
+			flex-grow: 0;
+			flex-basis: 100%;
+			margin-left: 5px;
+		}
+	}
+}

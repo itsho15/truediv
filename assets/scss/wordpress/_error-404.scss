@@ -1,0 +1,22 @@
+.error-404 {
+    padding: 80px 0;
+    
+    .page-header {
+        position: relative;
+        padding-left: 80px;
+        
+        &:after {
+            content: "\f06a";
+            font-family: $font_icon;
+            font-size: 64px;
+            color: #bdc3c7;
+            position: absolute;
+            top: -10px;
+            left: 0;
+        }
+        
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

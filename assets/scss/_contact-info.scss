@@ -1,0 +1,41 @@
+.top-contact-info {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style-type: none;
+        display: inline;
+        text-align: center;
+        margin-right: 10px;
+
+        &:before {
+            font-family: $font_icon;
+            display: inline-block;
+            margin-right: 7px;
+            color: #fff;
+        }
+        
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            @include shift(all, .2s, linear);
+
+            &:hover {
+                color: #ecf0f1;
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    .address:before { content: "\f041"; }
+    .phone-number:before { content: "\f095"; }
+    .mobile-number:before { content: "\f10b"; }
+    .fax-number:before { content: "\f1ac"; }
+    .email-address:before { content: "\f0e0"; }
+    .working-hours:before { content: "\f017"; }
+}

@@ -1,0 +1,115 @@
+/*  Footer  */
+
+.td-footer {
+    background-color: $black;
+    color: #fff;
+    padding: 80px 0;
+
+    @include m992 {
+        padding-bottom: 50px;
+    }
+
+    .td-footer-widget .td-widget-inner {
+        padding: 0;
+
+        .td-widget-title {
+            margin-bottom: 40px;
+        }
+    }
+
+    .widget_nav_menu {
+        ul {
+            column-count: 2;
+
+            li {
+                border-bottom: 0px dashed rgba(255, 255, 255, 0.1);
+
+                &:before {
+                    content: "\f101";
+                    font-family: $font_icon;
+                    color: #7f8c8d;
+                    display: inline-block;
+                    margin-right: 7px;
+                    font-size: 10px;
+                    font-weight: 700;
+                }
+
+            }
+        }
+    }
+
+    .widget_recent_entries {
+        padding-bottom: 0;
+
+        ul li {
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+
+            &:last-child {
+                border-bottom: 0px;
+            }
+        }
+    }
+
+    .widget_archive ul li::before,
+    .widget_categories ul li::before {
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+
+    .widget_archive ul li .td-post-count,
+    .widget_categories ul li .td-post-count {
+        color: #fff;
+    }
+}
+
+/* CopyRights */
+
+.td-copyright {
+    background-color: #272931;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+
+    a {
+        color: #fff;
+        @include shift(all, .2s, linear);
+
+        &:hover {
+            color: #7f8c8d;
+        }
+    }
+
+    .copyright-left {
+    }
+    
+    .copyright-right {
+        text-align: right;
+        
+        .td-social {
+            text-align: right;
+        }
+    }
+}
+
+#td-back-to-top {
+    position: fixed;
+    bottom: -48px;
+    right: 30px;
+    background-color: #000;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    @include shift(all, .2s, linear);
+    opacity: 0;
+    visibility: hidden;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.td-back-to-top-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    bottom: 0 !important;
+}

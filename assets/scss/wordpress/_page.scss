@@ -1,0 +1,71 @@
+.td-page-head {
+    background-color: $black;
+    padding: 40px 0;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    position: relative;
+    filter: grayscale(100%);
+
+    @include m992 {
+        background-size: cover;
+    }
+
+    &:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .td-page-head-meta {
+        position: relative;
+        z-index: 1;
+
+        h1 {
+            color: #fff;
+            margin: 10px 0;
+            font-size: 32px;
+        }
+    }
+
+    .td-date {
+        color: #ecf0f1;
+        font-size: 12px;
+
+        &:before {
+            content: "\f017";
+            font-family: $font_icon;
+            display: inline-block;
+            margin-right: 7px;
+            font-weight: 500;
+        }
+    }
+}
+
+.page {
+
+    #content {
+        margin: 0;
+    }
+    
+    .td-content {
+        padding: 0;
+    }
+    
+    .td-boxed-warp {
+        background-image: none;
+        
+        .td-boxed {
+            width: inherit;
+            background-color: #fff;
+        }
+    }
+}

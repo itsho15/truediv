@@ -1,0 +1,28 @@
+.tag-cloud-link {
+    color: #95a5a6;
+    background-color: #ecf0f1;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 6px 10px;
+    margin: 3px 2px;
+    display: inline-block;
+
+    &:hover {
+        color: #fff;
+        background-color: #34495e;
+        
+        .tag-link-count {
+            color: #fff;
+        }
+    }
+}
+
+.tag-cloud-link a,
+.tag-cloud-link a:visited,
+.tag-cloud-link a:active {
+    text-decoration: none;
+}
+
+.tag-link-count {
+    color: #000;
+}

@@ -1,0 +1,59 @@
+.td-footer-widget {
+    @include m992 {
+        margin-bottom: 40px;
+    }
+
+    .td-widget-inner {
+        padding: 0 30px;
+
+        .td-widget-title h4 {
+            position: relative;
+            font-size: 16px;
+            color: #fff;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            &:before {
+                width: 60px;
+                height: 2px;
+                background-color: #ccc;
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+            }
+
+            &:after {
+                content: "";
+                width: 0;
+                height: 0;
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                border-left: 0;
+                border-right: 5px solid transparent;
+                border-top: 5px solid #ccc;
+            }
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    @include shift(all, .2s, linear);
+
+                    &:hover {
+                        color: #ccc;
+                    }
+                }
+            }
+        }
+    }
+}

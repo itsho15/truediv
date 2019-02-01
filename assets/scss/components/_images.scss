@@ -1,0 +1,38 @@
+// Images - Icons
+
+// @include parallax(100%, img , jpg);
+@mixin parallax($height, $image: null, $extensions: null) {
+    height: $height;
+    background-image: url(assets/img/#{$image}.#{$extensions});
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+// @include icon(32px, svg);
+@mixin icon($x, $svg: null) {
+    width: $x;
+    height: $x;
+    content: "";
+    position: absolute;
+    background-image: url(assets/icons/#{$svg}.svg);
+    background-repeat: no-repeat;
+}
+
+// @include jpg();
+@mixin jpg($jpg: null) {
+    background-image: url(assets/img/#{$jpg}.jpg);
+}
+
+// @include png();
+@mixin png($png: null) {
+    background-image: url(assets/img/#{$png}.png);
+}
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+}

@@ -1,0 +1,128 @@
+.sticky-posts {
+    margin: 0 15px 40px;
+    
+    .col-lg-6,
+    .col-lg-3 {
+        padding: 0;
+    }
+
+    .first,
+    .second {
+        position: relative;
+        overflow: hidden;
+
+        .thumb {
+            
+            img {
+                @include shift(all, .3s, ease-in-out);
+                z-index: 0;
+            }
+
+            a {
+                position: relative;
+                display: block;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 101%;
+                    height: 100%;
+                    @include graV(transparent, #111);
+                    @include shift(all, .2s, linear);
+                    z-index: 1;
+                }
+            }
+        }
+
+        .meta {
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            padding: 0 20px;
+            z-index: 2;
+            @include shift(all, .2s, linear);
+
+            .td-category {
+                display: block;
+                margin-bottom: 5px;
+                
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    background-color: #ccc;
+                    padding: 3px 5px;
+                    border-radius: 3px;
+                }
+            }
+            
+            h3 {
+                font-size: 21px;
+                margin-bottom: 0;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+
+            .date {
+                color: #fff;
+                font-size: 12px;
+                opacity: 0;
+                visibility: hidden;
+                @include shift(all, .2s, linear);
+
+                &:before {
+                    font-family: $font_icon;
+                    display: inline-block;
+                    margin-right: 7px;
+                    color: #fff;
+                    content: "\f017";
+                }
+            }
+        }
+
+        &:hover .thumb {
+            
+            img {
+                transform: scale3d(1.1,1.1,1);
+            }
+            
+            a:before {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+        }
+
+        &:hover .meta {
+            bottom: 15px;
+            
+            .date {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .second {
+
+        .thumb {
+            @include m992 {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .meta {
+            h3 {
+                font-size: 16px;
+            }
+        }
+    }
+}

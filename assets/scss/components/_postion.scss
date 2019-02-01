@@ -1,0 +1,27 @@
+// Position
+
+// @include pos(absolute, 1px, 2px, 3px, 4px);
+@mixin pos($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// @include itemCenter();
+@mixin itemCenter() {
+    position: absolute;
+    height: auto;
+    right: auto;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}

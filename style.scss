@@ -1,0 +1,28 @@
+@import "assets/scss/wp.scss";
+
+// Variables
+@import "assets/scss/variables.scss";
+
+// Components
+@import "assets/scss/components/components.scss";
+
+// Main Style
+@import "assets/scss/style.scss";
+@import "assets/scss/wordpress/wordpress.scss";
+@import "assets/scss/wordpress/widget.scss";
+@import "assets/scss/wordpress/widget-footer.scss";
+@import "assets/scss/wordpress/article.scss";
+@import "assets/scss/wordpress/single.scss";
+@import "assets/scss/wordpress/page.scss";
+@import "assets/scss/wordpress/breadcrumbs.scss";
+@import "assets/scss/wordpress/error-404.scss";
+@import "assets/scss/wordpress/search-page.scss";
+@import "assets/scss/contact-info.scss";
+@import "assets/scss/social.scss";
+
+
+@import "assets/scss/header/header.scss";
+@import "assets/scss/header/topbar.scss";
+@import "assets/scss/header/sticky-posts.scss";
+
+@import "assets/scss/footer.scss";
